@@ -36,16 +36,20 @@ class RunFragment : Fragment(R.layout.fragment_run), EasyPermissions.PermissionC
             return
         }
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) {
-            EasyPermissions.requestPermissions(this, "This is a running tracker app ",
-                    REQUEST_CODE_LOCATION_PERMISSION,
-                    Manifest.permission.ACCESS_COARSE_LOCATION,
-                    Manifest.permission.ACCESS_FINE_LOCATION)
+            EasyPermissions.requestPermissions(
+                this, "This is a running tracker app ",
+                REQUEST_CODE_LOCATION_PERMISSION,
+                Manifest.permission.ACCESS_COARSE_LOCATION,
+                Manifest.permission.ACCESS_FINE_LOCATION
+            )
         } else {
-            EasyPermissions.requestPermissions(this, "This is a running tracker app ",
-                    REQUEST_CODE_LOCATION_PERMISSION,
-                    Manifest.permission.ACCESS_COARSE_LOCATION,
-                    Manifest.permission.ACCESS_FINE_LOCATION,
-                    Manifest.permission.ACCESS_BACKGROUND_LOCATION)
+            EasyPermissions.requestPermissions(
+                this, "This is a running tracker app ",
+                REQUEST_CODE_LOCATION_PERMISSION,
+                Manifest.permission.ACCESS_COARSE_LOCATION,
+                Manifest.permission.ACCESS_FINE_LOCATION,
+                Manifest.permission.ACCESS_BACKGROUND_LOCATION
+            )
         }
     }
 
